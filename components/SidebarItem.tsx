@@ -12,7 +12,10 @@ interface SidebarItemProps{
 
 
 const SidebarItem: React.FC<SidebarItemProps> =({
-    icon,label,active,href   
+    icon:Icon,
+    label,
+    active,
+    href   
 })=>{
     return(
        <Link href={href} 
@@ -33,8 +36,9 @@ const SidebarItem: React.FC<SidebarItemProps> =({
        `,
        active && "text-white"
        )}>
-        Sidebar 
-       
+        <Icon size={26}/>
+        <p className="truncate w-full">{label}</p>
+
        </Link>
     )
 
